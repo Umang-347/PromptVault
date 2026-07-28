@@ -4,9 +4,10 @@ import Sidebar from "../components/layout/Sidebar";
 import PromptCard from "../components/PromptCard";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import type { Prompt } from "../types/prompt";
+import { onboardingPrompts } from "../data/onboardingPrompts";
 
 export default function Dashboard() {
-  const [prompts, setPrompts] = useLocalStorage<Prompt[]>("prompts", []);
+  const [prompts, setPrompts] = useLocalStorage<Prompt[]>("prompts", onboardingPrompts);
   const [search, setSearch] = useState("");
 
   const filteredPrompts = prompts.filter(p =>
