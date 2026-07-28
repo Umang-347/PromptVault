@@ -1,75 +1,66 @@
-# React + TypeScript + Vite
+# 🚀 PromptVault
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**PromptVault: The missing library for your AI workflow.**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+PromptVault is a lightweight, high-performance personal library designed to help AI power-users save, organize, and instantly retrieve their most valuable AI instructions. Stop wasting time scrolling through endless chat histories—save your best prompt engineering efforts and supercharge your productivity.
 
-## React Compiler
+## 🌟 Why PromptVault?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+We all have those "perfect" prompts that took hours to craft, only for them to get buried in conversational threads. PromptVault solves the friction of prompt management with:
 
-## Expanding the ESLint configuration
+*   **⚡ Instant Retrieval:** A real-time, fuzzy search bar to filter prompts by title, content, or tags in milliseconds.
+*   **🔒 Local-First Privacy:** All your prompts are stored directly in your browser's `localStorage`. Your data never leaves your machine.
+*   **🎨 Modern Design:** A polished, responsive dashboard built with **React 19**, **Tailwind CSS 4**, and **Shadcn UI**.
+*   **🏷️ Categorization:** Organize your prompts with easy-to-use comma-separated tags.
+*   **🚀 Zero-Effort Onboarding:** Pre-loaded with a helpful tutorial to guide you through your first additions.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ The Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Built for speed and developer-friendliness:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Frontend:** React 19 (TypeScript)
+- **Styling:** Tailwind CSS 4
+- **Components:** Shadcn/UI (Radix-backed)
+- **State/Persistence:** Custom `useLocalStorage` React Hook
+- **Routing:** React Router
+- **Icons:** Lucide React
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
 
-```
+### Prerequisites
+- Node.js (v18+)
+- npm or pnpm
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Run Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Umang-347/PromptVault.git
+   cd PromptVault
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser:** Access the dashboard at `http://localhost:5173`.
+
+---
+
+## 💡 How it works
+
+1. **Add:** Click "New Prompt" to open the interactive dialog and save your latest AI instruction.
+2. **Search:** Start typing in the main dashboard view to instantly filter your personal collection.
+3. **Copy:** Save and re-use your most complex prompts across your favorite AI platforms (Claude, ChatGPT, etc.) with ease.
+
+---
+
+*Built with passion for the Anthropic community.*
