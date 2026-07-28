@@ -2,9 +2,13 @@ import type { Prompt } from "../types/prompt";
 
 interface PromptCardProps {
   prompt: Prompt;
+  onDelete: (id: string) => void;
 }
 
-export default function PromptCard({ prompt }: PromptCardProps) {
+export default function PromptCard({
+  prompt,
+  onDelete,
+}: PromptCardProps) {
   return (
     <div className="bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-700">
       <h2 className="text-2xl font-bold text-white">
@@ -24,6 +28,15 @@ export default function PromptCard({ prompt }: PromptCardProps) {
             {tag}
           </span>
         ))}
+      </div>
+
+      <div className="mt-5 flex justify-end">
+        <button
+          onClick={() => onDelete(prompt.id)}
+          className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition"
+        >
+          🗑 Delete
+        </button>
       </div>
     </div>
   );
